@@ -1,0 +1,6 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+[user]
+	name = Neng
+	email = zhougn@gmail.com
