@@ -1,4 +1,4 @@
-vim-go
+Dotfiles
 ======
 
-Power your vim for rails &amp; web development!
+zhougn's dofiles
