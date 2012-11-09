@@ -15,7 +15,10 @@
     set cursorline
     " status line
         set laststatus=2
-        set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %{fugitive#statusline()}\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)
+        "set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %{fugitive#statusline()}\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)
+        Bundle 'Lokaltog/vim-powerline'
+            let g:Powerline_stl_path_style = 'relative'
+            let g:Powerline_colorscheme = 'solarized256'
     " syntax
         syntax on
         nmap <leader>ft :set filetype=
@@ -48,6 +51,7 @@
         Bundle 'ZoomWin'
 
 " Edit
+    set encoding=utf-8
     set autowrite
     nmap Y y$
     " find
