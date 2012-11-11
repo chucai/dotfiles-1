@@ -104,8 +104,8 @@
         let g:neocomplcache_enable_camel_case_completion = 1
         let g:neocomplcache_enable_underbar_completion = 1
         let g:neocomplcache_enable_auto_select = 1
-        imap <expr><Tab> neocomplcache#start_manual_complete()
-        imap <expr><C-e> neocomplcache#cancel_popup()
+        imap <expr><C-Space> neocomplcache#start_manual_complete()
+        imap <expr><C-k> neocomplcache#cancel_popup()
 
     Bundle 'Align'
     Bundle 'matchit.zip'
