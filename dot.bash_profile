@@ -1,3 +1,5 @@
+# locale
+export LC_CTYPE="en_US.UTF-8"
 # path
 PATH=.:$PATH:/usr/local/sbin
 export PATH
@@ -25,6 +27,7 @@ export SVN_EDITOR=vim
 
 #alias[freewheel]
 alias rpm='cd ~/Workspace/freewheel/rpm'
+alias ui='cd ~/Workspace/freewheel/ui'
 alias search='cd ~/Workspace/freewheel/search'
 alias common='cd ~/Workspace/freewheel/rpm/modules/ui-common'
 alias oltp='cd ~/Workspace/freewheel/rpm_oltp'
@@ -51,7 +54,7 @@ alias cucu='sudo bundle exec cucumber -p common'
 #alias[git]
 alias gst='git status'
 alias gci='git commit'
-alias gpull='git pull'
+alias gpull='git pull --rebase'
 alias gpush='git push'
 alias gdi='git diff --color'
 alias gadd='git add'
@@ -66,6 +69,8 @@ alias gtag='git tag'
 alias gclean='git clean'
 alias gs='git svn'
 alias gsub='git submodule'
+
+alias jsl='jsl -conf ~/.jslconf'
 
 # This loads RVM into a shell session
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
