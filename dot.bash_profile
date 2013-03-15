@@ -1,7 +1,7 @@
 # locale
 export LC_CTYPE="en_US.UTF-8"
 # path
-PATH=.:$PATH:/usr/local/sbin
+PATH=.:$PATH:/usr/local/sbin:/usr/local/share/npm/bin
 export PATH
 
 #color theme
@@ -54,14 +54,14 @@ alias cucu='sudo bundle exec cucumber -p common'
 #alias[git]
 alias gst='git status'
 alias gci='git commit'
-alias gpull='git pull --rebase'
-alias gpush='git push'
-alias gdi='git diff --color'
+alias gf='git fetch -p'
+alias gpl='git pull --rebase'
+alias gps='git push'
+alias gdi='git diff'
 alias gadd='git add'
 alias grm='git rm'
 alias gco='git checkout'
-alias gbr='git branch'
-alias glog='git log'
+alias gb='git b'
 alias gmerge='git merge'
 alias gmv='git mv'
 alias greset='git reset'
@@ -69,6 +69,8 @@ alias gtag='git tag'
 alias gclean='git clean'
 alias gs='git svn'
 alias gsub='git submodule'
+alias gl='git l'
+alias gstash='git stash'
 
 alias jsl='jsl -conf ~/.jslconf'
 

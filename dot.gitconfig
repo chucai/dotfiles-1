@@ -1,6 +1,50 @@
 [core]
-	excludesfile = ~/.gitignore
-	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+    excludesfile = ~/.gitignore
+    editor = /Applications/MacVim.app/Contents/MacOS/Vim
 [user]
-	name = Neng
-	email = zhougn@gmail.com
+    name = Neng
+    email = zhougn@gmail.com
+[log]
+    decorate = full
+
+[alias]
+    l = log --graph --color --pretty=format:'%C(yellow)%h %C(bold red)%d%Creset %s %Cgreen(%cn %cr)%Creset'
+    la = log --graph --color --pretty=format:'%C(yellow)%h %C(bold red)%d%Creset %s %Cgreen(%cn %cr)%Creset' --all
+    ls = log --graph --color --pretty=format:'%C(yellow)%h %C(bold red)%d%Creset %s %Cgreen(%cn %cr)%Creset' --stat
+    lp = log --graph --color --pretty=format:'%C(yellow)%h %C(bold red)%d%Creset %s %Cgreen(%cn %cr)%Creset' -p
+    st = status
+    ci = commit
+    co = checkout
+    sub = submodule
+    r = rebase
+    b = branch
+    bb = branch -avv
+    bn = branch -avv --no-merged
+    bm = branch -avv --merged
+    d = diff
+    ds = diff --staged
+    sh = stash
+    sp = stash pop
+    m = merge
+    pl = pull
+    ps = push
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan

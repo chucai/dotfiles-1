@@ -15,7 +15,6 @@
     set cursorline
     " status line
         set laststatus=2
-        "set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %{fugitive#statusline()}\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)
         Bundle 'Lokaltog/vim-powerline'
             let g:Powerline_stl_path_style = 'relative'
             let g:Powerline_colorscheme = 'solarized256'
@@ -24,6 +23,8 @@
         nmap <leader>ft :set filetype=
         Bundle 'Syntastic'
             let g:syntastic_auto_loc_list=1
+            let g:syntastic_enable_signs=1
+
     " theme
         set t_Co=256
         Bundle 'zhougn/molokai-plus'
@@ -37,7 +38,7 @@
             let g:NERDTreeShowLineNumbers = 1
             let g:NERDTreeQuitOnOpen = 1
             let g:NERDTreeMinimalUI = 1
-            let g:NERDTreeChDirMode = 2
+            let g:NERDTreeChDirMode = 1
             let g:NERDTreeWinSize = 30
             nmap <leader>ss :NERDTreeToggle<CR>
             nmap <leader>sf :NERDTreeFind<CR>
@@ -48,6 +49,8 @@
         nmap <C-j> <C-w>j
         nmap <C-k> <C-w>k
         nmap <C-l> <C-w>l
+        set splitbelow
+        set splitright
         Bundle 'ZoomWin'
 
 " Edit
@@ -61,7 +64,7 @@
         set incsearch
         set hlsearch
         " do not jump when search
-        nmap * *<c-o>
+        Bundle 'star-search'
         Bundle 'ack.vim'
         Bundle 'NERD_Tree-and-ack'
     " fold
@@ -122,15 +125,24 @@
 
 " Goto
     " ctags
-        nmap <silent> <C-]> g<C-]>
-        vmap <silent> <C-]> g<C-]>
+    " replaced with ctrl-tjump
+        "nmap <silent> <C-]> g<C-]>
+        "vmap <silent> <C-]> g<C-]>
     " Buffer
         " Goto last opened buffer, not working in iTerm and Terminal
         nmap <C-Tab> :b#<cr>
     Bundle 'ctrlp.vim'
+        Bundle 'ctrlp-funky'
+        Bundle 'ctrlp-tjump'
+        let g:ctrlp_max_height = 20
+        let g:ctrlp_extensions = ['funky', 'tjump']
         let g:ctrlp_root_markers = ['.git']
+        let g:ctrlp_switch_buffer = 'h'
         nmap gb :CtrlPBuffer<cr>
         nmap gr :CtrlPMRUFiles<cr>
+        nmap gd :CtrlPFunky<cr>
+        nmap gD :execute 'CtrlPFunky ' . expand('<cword>')<cr>
+        nnoremap <c-]> :CtrlPtjump<cr>
 
 " VCS
     Bundle 'fugitive.vim'
@@ -152,8 +164,13 @@
 
 " Ruby & Rails
     autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.thor set filetype=ruby
+    autocmd BufNewFile,BufRead Thorfile set filetype=ruby
     Bundle 'tpope/vim-rails'
     Bundle 'cucumber.zip'
+    Bundle 'slim-template/vim-slim'
+      autocmd BufNewFile,BufRead *.slim,*.slimbars set syntax=slim
+      autocmd FileType slim set tabstop=2|set shiftwidth=2|set expandtab
 
 
 filetype plugin indent on
