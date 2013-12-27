@@ -15,7 +15,7 @@ function parse_git_branch {
 
 export PS1='\e[1;33m$(rvm current) \u @ \w $(parse_git_branch)\e[0m\n>>>$ '
 
-#Homebrew cask
+#homebrew-cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 #alias[bash]
@@ -81,3 +81,5 @@ alias jsl='jsl -conf ~/.jslconf'
 # This loads RVM into a shell session
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
+
+#filetype=bash
