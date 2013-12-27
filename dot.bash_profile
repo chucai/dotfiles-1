@@ -15,6 +15,9 @@ function parse_git_branch {
 
 export PS1='\e[1;33m$(rvm current) \u @ \w $(parse_git_branch)\e[0m\n>>>$ '
 
+#Homebrew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 #alias[bash]
 alias ll='ls -l'
 alias la='ls -al'
@@ -50,6 +53,7 @@ alias sp='rails s -e production'
 alias s='rails s'
 alias be='bundle exec'
 alias cucu='sudo bundle exec cucumber -p common'
+alias tbi='GEM_SOURCE="http://ruby.taobao.org" bundle install'
 
 #alias[git]
 alias gst='git status'

@@ -2,5 +2,5 @@
 --type-add=css=.scss
 --ignore-dir=log
 --ignore-dir=tmp
---ignore-dir=public/*/assets
+--ignore-dir=public
 --ignore-file=is:tags
